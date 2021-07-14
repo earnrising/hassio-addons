@@ -1,5 +1,19 @@
 # Changelog
 
+## 9.1.3
+
+- Upgrade Home Assistant CLI to 4.12.3
+
+## 9.1.2
+
+- Upgrade Home Assistant CLI to 4.12.2
+
+## 9.1.1
+
+- Use GitHub Container Registry for the base image
+- Upgrade Home Assistant CLI to 4.12.1
+- Upstream ttyd project now uses the main branch
+
 ## 9.1.0
 
 - Upgrade Home Assistant CLI to 4.11.0
