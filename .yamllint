@@ -1,0 +1,27 @@
+---
+extends: default
+
+# Repository updater writes these files with its own formatting
+ignore: |
+  /cec_scan/config.yaml
+  /configurator/config.yaml
+  /deconz/config.yaml
+  /dnsmasq/config.yaml
+  /duckdns/config.yaml
+  /git_pull/config.yaml
+  /letsencrypt/config.yaml
+  /mariadb/config.yaml
+  /matter_server/config.yaml
+  /mosquitto/config.yaml
+  /nginx_proxy/config.yaml
+  /openthread_border_router/config.yaml
+  /openwakeword/config.yaml
+  /piper/config.yaml
+  /rpc_shutdown/config.yaml
+  /samba/config.yaml
+  /silabs_flasher/config.yaml
+  /speech_to_phrase/config.yaml
+  /ssh/config.yaml
+  /vlc/config.yaml
+  /whisper/config.yaml
+  /zwave_js/config.yaml

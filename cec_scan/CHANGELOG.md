@@ -1,5 +1,22 @@
 # Changelog
 
+## 4.1.0
+
+- Update the base image to latest patch release.
+- Publish app to GHCR.
+
+## 4.0
+
+- Remove unsupported architectures (armhf, armv7, i386)
+- Update to Alpine 3.23
+- Update libCEC to 7.1.1
+
+## 3.0
+
+- Using the Upstream Linux support only
+- Using s6-overlay style
+- Update to Alpine 3.14
+
 ## 2.4
 
 - Use new `video` feature of Supervisor 199

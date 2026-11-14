@@ -1,25 +1,25 @@
-# Home Assistant Add-on: File editor
+# Home Assistant App: File editor
 
 ## Installation
 
-Follow these steps to get the add-on installed on your system:
+Follow these steps to get the app (formerly known as add-on) installed on your system:
 
-1. Navigate in your Home Assistant frontend to **Supervisor** -> **Add-on Store**.
-2. Find the "File editor" add-on and click it.
+1. Navigate in your Home Assistant frontend to **Settings** > **Apps** > **Install app**.
+2. Find the "File editor" app and click it.
 3. Click on the "INSTALL" button.
 
 ## How to use
 
-In general, this add-on requires no configuration from your end.
+In general, this app requires no configuration from your end.
 
 1. Toggle the "Show in sidebar" option, which adds the File editor to the main menu.
-2. Start the add-on.
+2. Start the app.
 3. Refresh your browser, the "File editor" is now visible in the sidebar.
 4. Click on the "File editor" menu option and start configuring!
 
 ## Configuration
 
-Add-on configuration:
+App configuration:
 
 ```yaml
 dirsfirst: false
@@ -27,6 +27,7 @@ enforce_basepath: false
 git: true
 ignore_pattern:
   - __pycache__
+log_level: info
 ssh_keys: []
 ```
 
@@ -38,16 +39,24 @@ Set it to `true` to list directories first, `false` otherwise.
 
 ### Option: `enforce_basepath` (required)
 
-If set to `true`, access is limited to files within the `/config` directory.
+If set to `true`, access is limited to files within the `/homeassistant` directory
+(also known as the `/config` folder inside Home Assistant itself).
 
 ### Option: `git` (required)
 
-If set to `true`, add-on will initialize git for directories which support it.
+If set to `true`, the app will initialize git for directories that support it.
 
 ### Option: `ignore_pattern` (required)
 
 This option allows you to hide files and folders from the file browser tree.
 By default, it hides the `__pycache__` folders.
+
+### Option: `log_level` (optional)
+
+Controls how much the file editor logs: `debug`, `info`, `warning`, `error` or
+`critical`. The default is `info`, which logs every web request, including the
+Docker health check that runs every 30 seconds. Set it to `warning` to log only
+problems.
 
 ### Option: `ssh_keys` (required)
 
@@ -55,7 +64,7 @@ A list of filenames containing SSH private keys. These can be used to allow for 
 
 ## Known issues and limitations
 
-- This add-on can only be used via Ingress and has no direct access.
+- This app can only be used via Ingress and has no direct access.
 
 ## Support
 
@@ -69,8 +78,7 @@ You have several options to get them answered:
 
 In case you've found a bug, please [open an issue on our GitHub][issue].
 
-[discord]: https://discord.gg/c5DvZ4e
+[discord]: https://www.home-assistant.io/join-chat
 [forum]: https://community.home-assistant.io
-[issue]: https://github.com/home-assistant/hassio-addons/issues
+[issue]: https://github.com/home-assistant/app-configurator/issues
 [reddit]: https://reddit.com/r/homeassistant
-[repository]: https://github.com/hassio-addons/repository

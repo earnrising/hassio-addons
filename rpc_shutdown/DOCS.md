@@ -1,23 +1,23 @@
-# Home Assistant Add-on: RPC Shutdown
+# Home Assistant App: RPC Shutdown
 
 ## Installation
 
-Follow these steps to get the add-on installed on your system:
+Follow these steps to get the app installed on your system:
 
-1. Navigate in your Home Assistant frontend to **Supervisor** -> **Add-on Store**.
-2. Find the "RPC Shutdown" add-on and click it.
+1. In Home Assistant, go to **Settings** > **Apps** > **Install app**.
+2. Find the "RPC Shutdown" app and click it.
 3. Click on the "INSTALL" button.
 
 ## How to use
 
 In the configuration section, define alias, address and credentials and save the configuration.
 
-1. Start the add-on.
-2. Check the add-on log output to see the result.
+1. Start the app.
+2. Check the app log output to see the result.
 
 ## Configuration
 
-Add-on configuration:
+App configuration:
 
 ```yaml
 computers:
@@ -45,35 +45,35 @@ Set an alias for this record, which becomes the name for the input.
 
 IP address or NetBIOS name of the computer to be able to shutdown.
 
-### Option:  `computers.credentials` (required)
+### Option: `computers.credentials` (required)
 
 Credentials for logging into the computer.
 Use a `%` as the delimiter of username and password.
 
-### Option:  `computers.delay` (optional)
+### Option: `computers.delay` (optional)
 
 A delay (in seconds) before shutting down the computer. This gives a user that happens to be using that computer time to save their work.
 
-### Option:  `computers.message` (optional)
+### Option: `computers.message` (optional)
 
 Show a custom message on the screen of the computer that will be shutdown.
 
 ## Home Assistant configuration
 
-Use the following inside Home Assistant service call to use it:
+Use the following inside Home Assistant action call to use it:
 
 ```yaml
-service: hassio.addon_stdin
+action: hassio.app_stdin
 data:
-  addon: core_rpc_shutdown
+  app: core_rpc_shutdown
   input: test-pc
 ```
 
 Each line explained:
 
-`service: hassio.addon_stdin`: Use hassio.addon_stdin service to send data over STDIN to an add-on.
-`data.addon: core_rpc_shutdown`: Tells the service to send the command to this add-on.
-`data.input: test-pc`: Alias name created for the computer in the add-on configuration, and shuts that one down.
+`action: hassio.app_stdin`: Use hassio.app_stdin service to send data over STDIN to an app.
+`data.app: core_rpc_shutdown`: Tells the service to send the command to this app.
+`data.input: test-pc`: Alias name created for the computer in the app configuration, and shuts that one down.
 
 ## Support
 
@@ -88,6 +88,6 @@ You have several options to get them answered:
 In case you've found a bug, please [open an issue on our GitHub][issue].
 
 [forum]: https://community.home-assistant.io
-[issue]: https://github.com/home-assistant/hassio-addons/issues
+[issue]: https://github.com/home-assistant/app-rpc-shutdown/issues
 [reddit]: https://reddit.com/r/homeassistant
-[repository]: https://github.com/hassio-addons/repository
+[discord]: https://www.home-assistant.io/join-chat

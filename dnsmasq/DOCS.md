@@ -1,26 +1,26 @@
-# Home Assistant Add-on: Dnsmasq
+# Home Assistant App: Dnsmasq
 
 ## Installation
 
-Follow these steps to get the add-on installed on your system:
+Follow these steps to get the app (formerly known as add-on) installed on your system:
 
-1. Navigate in your Home Assistant frontend to **Supervisor** -> **Add-on Store**.
-2. Find the "Dnsmasq" add-on and click it.
+1. In Home Assistant, go to **Settings** > **Apps** > **Install app**.
+2. Find the "Dnsmasq" app and click it.
 3. Click on the "INSTALL" button.
 
 ## How to use
 
-The add-on has a couple of options available. For more detailed instructions
-see below. The basic thing to get the add-on running would be:
+The app has a couple of options available. For more detailed instructions
+see below. The basic thing to get the app running would be:
 
-1. Start the add-on.
+1. Start the app.
 
 ## Configuration
 
-The Dnsmasq add-on can be tweaked to your likings. This section
-describes each of the add-on configuration options.
+The Dnsmasq app can be tweaked to your likings. This section
+describes each of the app configuration options.
 
-Example add-on configuration:
+Example app configuration:
 
 ```yaml
 defaults:
@@ -38,6 +38,7 @@ services:
     port: 389
     priority: 0
     weight: 100
+log_queries: false
 ```
 
 ### Option: `defaults` (required)
@@ -106,6 +107,50 @@ The priority for the service.
 
 The weight for the service.
 
+### Option: `cnames` (optional)
+
+This option allows you to provide cname records.
+
+#### Option: `cnames.name`
+
+The name to resolve.
+
+#### Option: `cnames.target`
+
+The target name. Note that this only works for targets which are names from DHCP or /etc/hosts. Give host "bert" another name, bertrand cname=bertand,bert
+
+### Option: `txts` (optional)
+
+This option allows you to provide txt records.
+
+#### Option: `txts.name`
+
+The name to resolve.
+
+#### Option: `txts.value`
+
+The resulting txt string.
+
+### Option: `ptrs` (optional)
+
+This option allows you to provide ptr records.
+
+#### Option: `ptrs.ip`
+
+The IP address to resolve as reverse-mapping domain name. Use reversed IP address with ".in-addr.arpa" added, for example for IP address "1.2.3.4" use "4.3.2.1.in-addr.arpa".
+
+#### Option: `ptrs.name`
+
+The resulting name.
+
+### Option: `log_queries` (required)
+
+Log all DNS requests. Defaults to `false`.
+
+### Option: `cache_size`
+
+Sets the size of the Dnsmasq cache. The default setting is 150. If this is set to 0 this disables caching. Note that huge cache sizes can create performance problems.
+
 ## Support
 
 Got questions?
@@ -118,8 +163,8 @@ You have several options to get them answered:
 
 In case you've found a bug, please [open an issue on our GitHub][issue].
 
-[discord]: https://discord.gg/c5DvZ4e
+[discord]: https://www.home-assistant.io/join-chat
 [forum]: https://community.home-assistant.io
-[issue]: https://github.com/home-assistant/hassio-addons/issues
+[issue]: https://github.com/home-assistant/app-dnsmasq/issues
 [reddit]: https://reddit.com/r/homeassistant
 [repository]: https://github.com/hassio-addons/repository

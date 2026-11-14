@@ -1,5 +1,160 @@
 # Changelog
 
+## 8.8.0
+
+- Upgrade base image from bookworm to trixie
+- Fix timestamps in log messages during shutdown
+
+## 8.7.2
+
+- Bump deCONZ to 2.33.2 [[CHANGELOG](https://github.com/dresden-elektronik/deconz-rest-plugin/releases/tag/v2.33.2)]
+
+## 8.7.1
+
+- Avoid generating additional API keys upon HTTP/JSON errors
+- Update DOCS.md with an explanation for manual API key removal
+
+## 8.7.0
+
+- Drop unsupported architectures
+
+## 8.6.1
+
+- Align ingress colors with Home Assistant (toolbar color)
+
+## 8.6.0
+
+- Bump deCONZ to 2.32.5 [[CHANGELOG](https://github.com/dresden-elektronik/deconz-rest-plugin/releases/tag/v2.32.5)]
+- Renaming from add-on to app complete
+- HTTPS disabled
+
+## 8.5.3
+
+- Align ingress colors with Home Assistant (link color)
+
+## 8.5.2
+
+- Add configurable OTA update switches for Bosch, IKEA and OSRAM/LEDVANCE (default is off)
+- Add Bosch Smart Home OTA update script (Official repo)
+
+## 8.5.1
+
+- Add more debug options
+
+## 8.5.0
+
+- Fix discovery script
+
+## 8.4.0
+
+- Ingress entry page revised (for example, light and dark mode)
+- Update DOCS.md and a few naming corrections
+- Expand English translation
+
+## 8.3.0
+
+- Bump deCONZ to 2.31.2 [[CHANGELOG](https://github.com/dresden-elektronik/deconz-rest-plugin/releases/tag/v2.31.2)]
+
+## 8.2.0
+
+- Bump deCONZ to 2.30.2 [[CHANGELOG](https://github.com/dresden-elektronik/deconz-rest-plugin/releases/tag/v2.30.2)]
+
+## 8.1.0
+
+- Bump deCONZ to 2.29.5 [[CHANGELOG](https://github.com/dresden-elektronik/deconz-rest-plugin/releases/tag/v2.29.5)]
+
+## 8.0.0
+
+- Use openbox instead of dwm as window manager
+
+## 7.0.0
+
+- Bump deCONZ to 2.28.1
+- Use debian bookworm for all arch types
+- Use dwm instead of wmii as window manager
+
+## 6.23.0
+
+- Bump deCONZ to 2.25.3
+
+## 6.22.0
+
+- Revert deCONZ to 2.22.2 due to a Phoscon bug: https://forum.phoscon.de/t/phoscon-de-pwa-login-html-does-not-work-anymore/3967
+
+## 6.21.0
+
+- Bump deCONZ to 2.23.1
+
+## 6.20.0
+
+- Bump deCONZ to 2.22.2
+
+## 6.19.0
+
+- Bump deCONZ to 2.21.2
+
+## 6.18.0
+
+- Bump deCONZ to 2.20.1
+
+## 6.17.1
+
+- Bump deCONZ to 2.19.3
+
+## 6.17.0
+
+- Bump deCONZ to 2.19.1
+
+## 6.16.0
+
+- Bump deCONZ to 2.18.2
+
+## 6.15.0
+
+- Bump deCONZ to 2.17.1
+
+## 6.14.2
+
+- Fix finish script for S6 V3
+
+## 6.14.1
+
+- Version bump to fix S6 service permissions
+
+## 6.14.0
+
+- Bump deCONZ to 2.16.1
+
+## 6.13.0
+
+- Bump deCONZ to 2.15.3
+
+## 6.12.1
+
+- Fix Phoscon App gateway discovery with FQDN over Ingress
+- Improve Phoscon App subnet probing block when using Ingress
+
+## 6.12.0
+
+- Bump deCONZ to 2.14.1
+
+## 6.11.1
+
+- Add missing libqt5qml5 dependency
+- Do not force install of deCONZ packages
+
+## 6.11.0
+
+- Bump deCONZ to 2.13.4
+
+## 6.10.0
+
+- Bump deCONZ to 2.12.6
+
+## 6.9.0
+
+- Bump deCONZ to 2.11.5
+
 ## 6.8.0
 
 - Bump deCONZ to 2.10.4

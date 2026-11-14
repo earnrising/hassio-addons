@@ -1,5 +1,82 @@
 # Changelog
 
+## 4.0.0
+
+> [!IMPORTANT]
+> This update upgrades MariaDB from 11.4 to 11.8. The database migration will
+> be performed automatically on the first startup after the app is updated.
+> Make a backup of the MariaDB app before installing this update.
+>
+> Database and user names in the app configuration are now validated. Database
+> names can contain letters, digits, `_`, `$` and `-`. User names can contain
+> letters, digits, `_`, `.`, `@`, `-` and spaces. If your configuration uses
+> other characters, the app will not start after the update until you change
+> the names in the configuration.
+
+- Wait until the backup lock is held before reporting it
+- Validate database and user names, escape passwords and log setup errors
+- Update home-assistant/base image to 3.24-2026.11.0
+- Update home-assistant/base image to 3.24-2026.10.3
+- Update to Alpine 3.24 (MariaDB 11.4 to 11.8)
+- Properly close s6 notification file descriptors
+- Update base image to 3.23-2026.10.1
+- Publish app to GHCR
+
+## 3.0.1
+
+- Fix GRANT statement generation for multiple `privileges`
+
+## 3.0.0
+
+**Note:** This update upgrades MariaDB from 10.11 to 11.4. The database
+migration will be performed automatically on the first startup after the
+app is updated. Make a backup of the MariaDB app before installing this
+update.
+
+- Remove unsupported architectures (armhf, armv7, i386)
+- Update to Alpine 3.23 (updates MariaDB 10.11.6 to 11.4.9)
+
+## 2.7.2
+
+- Add option to configure MariaDB server parameters (see also [home-assistant/addons#3754](https://github.com/home-assistant/addons/issues/3754))
+
+## 2.7.1
+
+**Note:** Restart the add-on before upgrade if the current version is lower
+than 2.7.0! This is to ensure a clean stop right before the update (see also
+https://github.com/home-assistant/addons/issues/3566).
+
+- Increase MariaDB add-on shutdown timeout to 300s
+
+## 2.7.0
+
+- Update to Alpine 3.19
+
+## 2.6.1
+
+- Use proper log redirection during backup
+
+## 2.6.0
+
+- Migrate add-on layout to S6 Overlay
+- Update to MariaDB version 10.6.12
+
+## 2.5.2
+
+- Update to MariaDB version 10.6.10
+
+## 2.5.1
+
+- Remove deprecated `innodb-buffer-pool-instances`
+
+## 2.5.0
+
+- Update alpine to 3.16 and s6 to v3
+
+## 2.4.0
+
+- Add lock capabilities during snapshot
+
 ## 2.3.0
 
 - Option to grant user specific privileges for a database
@@ -9,6 +86,7 @@
 - Update options schema for passwords
 
 ## 2.2.1
+
 - Don't delete the mariadb.sys user, it's needed in MariaDB >= 10.4.13
 
 ## 2.2.0

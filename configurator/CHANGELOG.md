@@ -1,5 +1,98 @@
 # Changelog
 
+## 6.3.1
+
+- Stop calling the Core API from the health check @kleinc80 (#11)
+- Update home-assistant/base image to 3.24-2026.11.0 @[renovate[bot]](https://github.com/apps/renovate) (#12)
+- Update home-assistant/base image to 3.24-2026.10.3 @[renovate[bot]](https://github.com/apps/renovate) (#8)
+- Drop "dependency" from Renovate PR titles for Dockerfile ARGs @sairon (#6)
+
+## 6.3.0
+
+- Use a 5s startup healthcheck interval
+- Update hass-configurator to v0.7.0
+- Update the base image to latest patch release
+- Publish app to GHCR
+
+## 6.2.0
+
+- Add a `log_level` option; set it to `warning` to stop logging every web request, including the Docker health check
+
+## 6.1.0
+
+- Migrate to the new `all_app_configs` folder mapping name introduced in Home Assistant Supervisor
+- Update base image to 3.24-2026.06.1
+
+## 6.0.0
+
+- Update hass-configurator to 0.6.0 (see [changelog](https://github.com/danielperna84/hass-configurator/releases/tag/0.6.0) for details)
+- Update base image to Alpine 3.23
+- Drop unsupported architectures
+
+## 5.8.0
+
+- Update base image to Alpine 3.19
+
+## 5.7.0
+
+- Use new location for accessing the Home Assistant configuration folder using `/homeassistant`
+- Add access to the new public configuration folders of add-ons
+- Upgrade to Alpine 3.18
+- Remove unneeded pip configuration when building add-on
+- Remove unused variable in finish script
+
+## 5.6.0
+
+- Update base image to Alpine 3.17
+- Migrate old style S6 Overlay service scripts to new `s6-rc.d` style
+- Add Docker healthchecks
+
+## 5.5.1
+
+- Fix Home Assistant wheels path
+
+## 5.5.0
+
+- Update base image to Alpine 3.16
+  - Bumps `git` to 2.36.3
+  - Bumps `ssh` to OpenSSH_9.0p1
+  - Bumps `python3` to 3.10.9
+
+## 5.4.2
+
+- Bugfix: Fix page load with special characters in states
+
+## 5.4.1
+
+- Bugfix: Disable Ace-internal yaml-linting
+- Disable internal check for new releases
+
+## 5.4.0
+
+- Add Generate UUID menu item
+- Harmonize Home Assistant term
+- Rename Components to integrations
+- Remove images for libraries
+- Update jQuery to 3.6.0
+- Update js-yaml to 4.1.0
+- Update Ace Editor to 1.9.6
+
+## 5.3.3
+
+- Fix Home Assistant API endpoint
+
+## 5.3.2
+
+- Update base image to Alpine 3.14
+
+## 5.3.1
+
+- Update base image to Alpine 3.13
+
+## 5.3.0
+
+- Ignore input-keyword used in blueprints in yaml-linting
+
 ## 5.2.0
 
 - Add git option which allows disabling the (default) git initialization
